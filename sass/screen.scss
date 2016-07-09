@@ -1,0 +1,70 @@
+//Этот файл предназначен для работы с повторяющимся кодом.
+//Уникальное оформление элементов находиться в css/style.css
+
+//Цикл, который дает ачивке номер, в соответствии с её порядковым номером на странице
+@for $i from 1 through 100 {
+	$s:$i;
+  .block:nth-of-type(#{$i}) 
+  	{
+  		.number-2:before{
+    	content: $i+"";
+    line-height: 2.5;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+	}
+}
+}
+
+//у первого элемента нумерация отсутствует
+.block:first-of-type
+{
+	.number{display: none;}
+}
+
+//создание тестовых 14 классов с картинками
+@for $i from 1 through 14 {
+	.img#{$i}{
+	.img{
+		background: url("../img/img"+$i+".png");
+		background-size:contain;
+	}
+}
+}
+
+//в общем виде создание класса для изменения картинки в ачивке выглядит так:
+// .название_класса{
+//	.img{
+//		background: url("../путь_к_изображению/..");
+//		background-size:contain;
+//	}
+//}
+
+//массив с тестовыми цветами
+$colors : red, orange, yellow, green, aqua, blue, magenta;
+//автоматическое создание классов тестовых цветов
+@for $i from 1 through length($colors){
+.clr#{$i}{
+	.achive{
+		border-color: nth($colors, $i);
+	}
+	.number{
+		background:nth($colors, $i);
+		.number-2:before{
+			color: nth($colors, $i);
+		}
+	}
+}
+}
+//в общем виде создание класса для изменения цвеа границ и индекса ачивки выглядит так:
+//.название_класса{
+//	.achive{
+//		border-color: цвет;
+//	}
+//	.number{
+//		background:nth($colors, $i);
+//		.number-2:before{
+//			color: nth($colors, $i);
+//		}
+//	}
+//}
