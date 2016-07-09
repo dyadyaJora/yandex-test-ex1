@@ -1,0 +1,96 @@
+body{
+    font-family: sans-serif;
+    padding: 10px;
+}
+.main{
+	width: 100px;
+    position: relative;
+    height: 100px;
+}
+.achive{
+	width: 90px;
+    height: 90px;
+    background: #f7f5f8;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.number{
+	width: 30px;
+    height: 30px;
+    position: absolute;
+    background: black;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -2px;
+    right: -2px;
+}
+.number-2{
+	width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    background: #f7f5f8;
+    text-align: center;
+}
+.num{
+	line-height: 2.5;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.ava-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;    
+    border: 3px solid white;
+}
+.clearfix{
+    clear: both;
+}
+.avatar{
+    float:left;
+}
+.info{
+    float:left;
+    margin: 20px;
+}
+.name{
+    font-size: 24px;
+    color: #797979;
+}
+.act{
+    color: #6c7eb5;
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+}
+.email{
+    margin: 0;
+}
+.head{
+    background: #e2e2e2;
+    border-radius: 20px;
+    padding: 20px;
+}
+.block{
+    display: inline-block;
+    margin: 20px;
+}
+.img{
+        width: 65%;
+    height: 65%;
+    background: url("../img/noavatar.jpg");
+    background-size: contain;
+    margin: auto;
+    margin-top: 15%;
+}
+.img-block{
+        width: 90px;
+    height: 90px;
+    z-index: 10;
+    padding: 5px;
+    position: absolute;
+}
