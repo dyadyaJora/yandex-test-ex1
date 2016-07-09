@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Тестовое задание №1</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+
+<h1 align="center">Профиль</h1>
+<div class="head">
+	<div class="avatar">
+	<img src="img/noavatar.jpg" class="ava-img">
+	</div>
+	<div class="info">
+		<p class="name">Иванов Иван Иванович</p>
+		<p class="act">Менеждер</p>
+		<p class="email"><a href="#">ivanov@yandex.ru</a></p>
+
+	</div>
+	<div class="clearfix"></div>
+</div>
+<h3 align="center">Достижения</h3>
+<div id="wrapper">
+<!-- Блок ачивки
+<div class="block img5 clr1">
+<div class="main">
+	<div class="achive">
+		<img src="" alt="">
+	</div>
+	<div class="img-block">
+		
+	<div class="img"></div>
+	</div>
+	<div class="number">
+		<div class="number-2">
+		</div>
+	</div>
+	</div>
+</div> -->
+
+
+</div>
+<script>
+//в качестве теста создана функция, которая при загрузке страницы автоматически создает 100 ачивок, с выбором рандомых классов картинок и цветового оформления из существующих
+function loadContent(){
+	var clr, img;
+	for (var i = 0; i < 100; i++) {
+		clr = Math.floor(Math.random() * (7 ))+1 ;
+		img = Math.floor(Math.random() * (14 ))+1 ;
+		document.getElementById('wrapper').innerHTML += '<div class="block clr'+clr+' img'+img+ '"><div class="main"><div class="achive"><img src="" alt=""></div>	<div class="img-block">	<div class="img"></div>	</div>	<div class="number">		<div class="number-2">		</div>	</div>	</div></div>';
+	}
+
+}
+window.onload = loadContent;
+</script>
+</body>
+</html>
